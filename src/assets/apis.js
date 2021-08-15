@@ -1,0 +1,1 @@
+export const URL_TOKEN = 'http://192.168.1.3:45455/token';
