@@ -18,7 +18,7 @@ export default function Admin() {
           headers: myHeaders,
           redirect: 'follow'
           };
-          fetch("http://192.168.1.3:45455/api/NguoiDung/LayND", requestOptions)
+          fetch("http://192.168.1.9:45455/api/NguoiDung/LayND", requestOptions)
           .then(response => response.text())
           .then((result) => {
                var obj = JSON.parse(result)
@@ -68,7 +68,7 @@ export default function Admin() {
                     <div className="content-body">
                     <Switch>
                          <Route path="/admin/ordermon">
-                              <OderMon/>
+                              <OderMon nguoiDung = {user.IdNguoidung}/>
                          </Route>
                          <Route path="/admin/themban">
                               <ThemBan/>

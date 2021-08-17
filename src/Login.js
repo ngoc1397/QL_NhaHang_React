@@ -4,7 +4,7 @@ import { useHistory} from 'react-router-dom';
 import './assets/login.css';
 
 export default function Login() {
-const URL_TOKEN = 'http://192.168.1.3:45455/token';
+const URL_TOKEN = 'http://192.168.1.9:45455/token';
 let history = useHistory();
 const [tenDN, setTenDN] = useState('');
 const [matKhau, setMatKhau] = useState('');
@@ -34,7 +34,7 @@ const login = () =>{
      .then((result) => {
           localStorage.setItem("accessToken",result.access_token)
           console.log(result)
-          history.replace('/admin');
+          history.replace('/admin/ordermon');
      })
      .catch((error) => {console.log('error', error);
           localStorage.setItem("accessToken",null);

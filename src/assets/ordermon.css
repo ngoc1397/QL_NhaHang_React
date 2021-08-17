@@ -24,7 +24,7 @@
 }
 
 .left-ordermon_header_tablename {
-    width: 40%;
+    width: 30%;
     height: 100%;
     font-size: 30px;
     line-height: 80px;
@@ -53,6 +53,7 @@
     background: white;
     border-radius: 5px;
     padding: 1px;
+    padding-left: 5px;
     font-weight: 800;
     color: rgb(250, 4, 4);
     margin-left: 5px;
@@ -68,18 +69,50 @@
 .left-ordermon_bottom {
     height: 70px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-ordermon_bottom-textfeild {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    flex: 1;
+    height: 100%;
+    background: rgba(255, 255, 192, 1);
 }
 
 .middle-ordermon {
     flex: 1;
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    height: calc(100vh - 60px);
+}
+
+.middle-ordermon-top {
+    height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: row;
     padding: 5px;
     box-sizing: border-box;
     align-content: flex-start;
     flex-wrap: wrap;
-    height: calc(100vh - 60px);
     overflow-y: scroll;
+}
+
+.middle-ordermon-bottom {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: start;
+    background: rgb(255, 255, 241);
 }
 
 .right-ordermon {
@@ -90,7 +123,7 @@
     background-color: rgb(251, 255, 255);
 }
 
-.table {
+.ban {
     width: 105px;
     margin: 5px;
     height: 100px;
@@ -103,11 +136,11 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.table-true {
-    background-color: crimson;
+.ban-true {
+    background-color: rgb(255, 19, 66);
 }
 
-.table:hover {
+.ban:hover {
     opacity: 0.9;
     cursor: pointer;
 }
@@ -115,6 +148,63 @@
 .right-ordermon_header {
     width: 100%;
     box-sizing: border-box;
-    background: rgb(122, 47, 47);
+    background: rgb(239, 255, 253);
     height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.right-ordermon_header-item {
+    display: flex;
+    margin: 5px;
+    flex-direction: row;
+}
+
+.right-ordermon_danhmuc {
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.right-ordermon_danhmuc-order {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.right-ordermon_danhmuc-chuyenban {
+    margin: 10px;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.right-ordermon_danhmuc-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    height: auto;
+}
+
+.right-ordermon_danhmuc-row-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(199, 199, 199);
+    border-collapse: collapse;
+    padding: 3px;
 }
